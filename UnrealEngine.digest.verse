@@ -2,7 +2,7 @@
 #################################################
 # Generated Digest of Verse API
 # DO NOT modify this manually!
-# Generated from build: ++Fortnite+Release-28.10-CL-30676362
+# Generated from build: ++Fortnite+Release-28.20-CL-31165234
 #################################################
 
 Temporary<public> := module:
@@ -572,6 +572,10 @@ Temporary<public> := module:
         # `InitialVector.RotateBy(MakeShortestRotationBetween(InitialVector, Vector)) = FinalVector` and
         # `MakeShortestRotationBetween(InitialVector, FinalVector)?.GetAngle()` is as small as possible.
         MakeShortestRotationBetween<native><public>(InitialVector:vector3, FinalVector:vector3)<transacts>:rotation
+
+        # Makes a new `rotation` from the component wise subtraction of the Euler angle components in `RotationA` by 
+        # the Euler angle components in `RotationB` and ensures the returned value is normalized.
+        MakeComponentWiseDeltaRotation<native><public>(RotationA:rotation, RotationB:rotation)<transacts>:rotation
 
         # Used to perform spherical linear interpolation between `From` (when `Parameter = 0.0`) and `To` (when `Parameter = 1.0`). Expects that `0.0 <= Parameter <= 1.0`.
         Slerp<native><public>(InitialRotation:rotation, FinalRotation:rotation, Parameter:float)<transacts><decides>:rotation

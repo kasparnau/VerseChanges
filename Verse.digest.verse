@@ -2,7 +2,7 @@
 #################################################
 # Generated Digest of Verse API
 # DO NOT modify this manually!
-# Generated from build: ++Fortnite+Release-28.10-CL-30835064
+# Generated from build: ++Fortnite+Release-28.20-CL-31165234
 #################################################
 
 # Module import path: /Verse.org/Simulation
@@ -78,11 +78,14 @@ Simulation<public> := module:
 Assets<public> := module:
     animation_sequence<native><public> := class<computes><final><epic_internal>:
 
-    material<native><public> := class<computes><epic_internal>:
+    material<native><public> := interface<epic_internal>:
 
     mesh<native><public> := class<computes><final><epic_internal>:
 
     texture<native><public> := class<computes><final><epic_internal>:
+
+# Module import path: /Verse.org/ParameterCollections
+ParameterCollections<public> := module:
 Verse<public> := module:
     using {/Verse.org/Colors}
     # Writes `Message` to a dedicated `Print` log while displaying it in `Color` on the client screen for `Duration` seconds. By default, `Color` is `NamedColors.White` and `Duration` is `2.0` seconds.
